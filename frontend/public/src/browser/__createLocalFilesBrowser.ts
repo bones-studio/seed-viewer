@@ -26,6 +26,10 @@ export function createLocalFilesBrowser(){
             <span class="material-symbols-outlined" style="font-size: 20px;">shuffle</span>
         </button>
 
+        <button id="tab-search-desc" class="p-1 border border-gray-300 rounded-lg text-gray-400 hover:text-gray-900 transition-colors" title="Search in natural descriptions">
+            <span class="material-symbols-outlined" style="font-size: 20px;">description</span>
+        </button>
+
         </div>
 
         <table id="browser-table-header" class="w-full table-fixed flex-none"></table>
@@ -70,6 +74,25 @@ export function createLocalFilesBrowser(){
 
     //run getCSV() when input button has file
     document.getElementById("tab-random")!.onclick = loadRandomAnim
+
+    const searchDescBtn = document.getElementById("tab-search-desc")!;
+    const searchDescIcon = searchDescBtn.querySelector(".material-symbols-outlined")!;
+    const updateSearchDescStyle = () => {
+        if (lg.SEARCH_DESC) {
+            searchDescBtn.classList.add("bg-bones", "border-bones", "text-gray-900");
+            searchDescBtn.classList.remove("border-gray-300", "text-gray-400");
+            searchDescIcon.style.fontVariationSettings = "'FILL' 1";
+        } else {
+            searchDescBtn.classList.remove("bg-bones", "border-bones", "text-gray-900");
+            searchDescBtn.classList.add("border-gray-300", "text-gray-400");
+            searchDescIcon.style.fontVariationSettings = "'FILL' 0";
+        }
+    };
+    updateSearchDescStyle();
+    searchDescBtn.onclick = () => {
+        lg.SEARCH_DESC = !lg.SEARCH_DESC;
+        updateSearchDescStyle();
+    };
     // document.getElementById("tab-load-row").onclick = loadAnimFromSelectedRow
 
 

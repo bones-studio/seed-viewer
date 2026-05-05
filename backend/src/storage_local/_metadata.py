@@ -36,9 +36,10 @@ def get_moves(
     page: int = 1,
     perpage: int = 1000,
     query: str = "",
+    search_desc: bool = False,
 ):
     
-    moves = get_matching_moves(query)
+    moves = get_matching_moves(query, search_desc=search_desc)
     
     # if no bvh found
     if len(moves) == 0:

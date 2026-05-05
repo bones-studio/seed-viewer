@@ -16,7 +16,8 @@ export const lg: {
     DATE_TO: string,
     REGEX_ON: boolean,
     DIRPATH: string,
-    BROWSER_TYPE: BrowserType
+    BROWSER_TYPE: BrowserType,
+    SEARCH_DESC: boolean
 
 } = {
     ISPROCESSINGFILTER: false,
@@ -33,5 +34,6 @@ export const lg: {
     DATE_TO: "",
     REGEX_ON: false,
     DIRPATH: "",
-    BROWSER_TYPE: g.DEFAULT_BROWSER_MODE
+    BROWSER_TYPE: g.DEFAULT_BROWSER_MODE,
+    SEARCH_DESC: false
 }

@@ -16,7 +16,8 @@ export async function getTablePage() {
             `page=${lg.PAGE}&` +
             `perpage=${lg.PERPAGE}&` +
             `query=${lg.QUERY}&` +
-            `regex=${lg.REGEX_ON}`
+            `regex=${lg.REGEX_ON}&` +
+            `search_desc=${lg.SEARCH_DESC}`
     }
     else {
         alert("BUG: Unknown browser type")
