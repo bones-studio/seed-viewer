@@ -26,7 +26,7 @@ export function createLocalFilesBrowser(){
             <span class="material-symbols-outlined" style="font-size: 20px;">shuffle</span>
         </button>
 
-        <button id="tab-search-desc" class="p-1 border border-gray-300 rounded-lg text-gray-400 hover:text-gray-900 transition-colors" title="Search in natural descriptions">
+        <button id="tab-search-desc" class="p-1 rounded-lg text-gray-400 hover:text-gray-900 transition-colors" title="Search in natural descriptions">
             <span class="material-symbols-outlined" style="font-size: 20px;">description</span>
         </button>
 
@@ -79,12 +79,12 @@ export function createLocalFilesBrowser(){
     const searchDescIcon = searchDescBtn.querySelector(".material-symbols-outlined")!;
     const updateSearchDescStyle = () => {
         if (lg.SEARCH_DESC) {
-            searchDescBtn.classList.add("bg-bones", "border-bones", "text-gray-900");
-            searchDescBtn.classList.remove("border-gray-300", "text-gray-400");
+            searchDescBtn.classList.add("bg-bones", "text-gray-900");
+            searchDescBtn.classList.remove("text-gray-400");
             searchDescIcon.style.fontVariationSettings = "'FILL' 1";
         } else {
-            searchDescBtn.classList.remove("bg-bones", "border-bones", "text-gray-900");
-            searchDescBtn.classList.add("border-gray-300", "text-gray-400");
+            searchDescBtn.classList.remove("bg-bones", "text-gray-900");
+            searchDescBtn.classList.add("text-gray-400");
             searchDescIcon.style.fontVariationSettings = "'FILL' 0";
         }
     };
